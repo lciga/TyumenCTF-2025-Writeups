@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Style</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: yellow;
+            font-family: "Courier New", Courier, monospace;
+            overflow: hidden;
+        }
+
+        #click-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            font-size: 48px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #content {
+            display: none;
+        }
+
+        .star-wars {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            perspective: 600px;
+        }
+
+        .text-wrapper {
+            transform-origin: 50% 100%;
+            width: 80%;
+            text-align: justify;
+            transform: rotateX(25deg) translateY(50px) scale(6);
+            animation: crawl 60s linear infinite;
+        }
+
+        @keyframes crawl {
+            0% {
+                transform: rotateX(25deg) translateY(600%) scale(6);
+            }
+            100% {
+                transform: rotateX(25deg) translateY(-100%) scale(6);
+            }
+        }
+
+        .line {
+            text-align: center;
+            width: 100%;
+            font-size: 100px;
+        }
+
+        .intro-text {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: yellow;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+    <audio id="audio" src="wtf.mp3"></audio>
+    <div id="click-button">Клик</div>
+    <div id="content">
+        <div class="intro-text">
+            Давным-давно, в далёкой-далёкой галактике…
+        </div>
+        <div class="star-wars">
+            <div class="text-wrapper">
+                <div class="line">7️⃣2️⃣ 5️⃣2️⃣ 1️⃣1️⃣5️⃣</div>
+                <div class="line">7️⃣3️⃣ 6️⃣5️⃣ 7️⃣9️⃣</div>
+                <div class="line">4️⃣8️⃣ 7️⃣1️⃣ 4️⃣7️⃣</div>
+                <div class="line">8️⃣7️⃣ 9️⃣9️⃣ 6️⃣7️⃣</div>
+                <div class="line">4️⃣7️⃣ 5️⃣1️⃣ 8️⃣6️⃣</div>
+                <div class="line">8️⃣4️⃣ 1️⃣0️⃣5️⃣ 8️⃣9️⃣</div>
+                <div class="line">5️⃣1️⃣ 6️⃣8️⃣ 7️⃣7️⃣</div>
+                <div class="line">6️⃣5️⃣ 1️⃣2️⃣0️⃣ 9️⃣8️⃣</div>
+                <div class="line">8️⃣2️⃣ 8️⃣3️⃣ 7️⃣7️⃣</div>
+                <div class="line">1️⃣0️⃣7️⃣ 1️⃣1️⃣6️⃣ 1️⃣1️⃣2️⃣</div>
+                <div class="line">5️⃣3️⃣ 5️⃣2️⃣ 1️⃣1️⃣0️⃣</div>
+                <div class="line">7️⃣0️⃣ 1️⃣2️⃣1️⃣ 9️⃣8️⃣</div>
+                <div class="line">5️⃣5️⃣ 6️⃣8️⃣ 4️⃣7️⃣</div>
+                <div class="line">6️⃣7️⃣ 1️⃣0️⃣7️⃣ 8️⃣8️⃣</div>
+                <div class="line">8️⃣1️⃣ 7️⃣9️⃣ 1️⃣0️⃣4️⃣</div>
+                <div class="line">5️⃣4️⃣ 7️⃣3️⃣ 7️⃣4️⃣</div>
+                <div class="line">8️⃣5️⃣ 6️⃣6️⃣ 1️⃣0️⃣3️⃣</div>
+                <div class="line">6️⃣7️⃣ 8️⃣3️⃣ 4️⃣9️⃣</div>
+                <div class="line">7️⃣7️⃣ 8️⃣3️⃣ 1️⃣2️⃣2️⃣</div>
+                <div class="line">8️⃣7️⃣ 8️⃣2️⃣ 8️⃣9️⃣</div>
+                <div class="line">6️⃣8️⃣ 1️⃣0️⃣2️⃣ 8️⃣0️⃣</div>
+                <div class="line">1️⃣0️⃣0️⃣ 9️⃣9️⃣ 1️⃣1️⃣4️⃣</div>
+                <div class="line">7️⃣8️⃣ 1️⃣1️⃣5️⃣ 5️⃣3️⃣</div>
+                <div class="line">1️⃣0️⃣9️⃣ 8️⃣8️⃣ 9️⃣0️⃣</div>
+                <div class="line">7️⃣6️⃣ 8️⃣9️⃣ 7️⃣1️⃣</div>
+                <div class="line">9️⃣9️⃣ 7️⃣9️⃣ 1️⃣1️⃣0️⃣</div>
+                <div class="line">1️⃣0️⃣2️⃣ 1️⃣2️⃣2️⃣ 8️⃣9️⃣</div>
+                <div class="line">8️⃣1️⃣ 7️⃣1️⃣ 7️⃣9️⃣</div>
+                <div class="line">1️⃣0️⃣5️⃣ 1️⃣1️⃣4️⃣ 5️⃣4️⃣</div>
+                <div class="line">9️⃣7️⃣ 7️⃣2️⃣ 5️⃣6️⃣</div>
+                <div class="line">7️⃣5️⃣ 7️⃣2️⃣ 8️⃣6️⃣</div>
+                <div class="line">1️⃣0️⃣1️⃣ 1️⃣0️⃣1️⃣ 9️⃣0️⃣</div>
+                <div class="line">1️⃣0️⃣4️⃣ 4️⃣8️⃣ 8️⃣7️⃣</div>
+                <div class="line">1️⃣2️⃣2️⃣ 7️⃣2️⃣ 1️⃣1️⃣4️⃣</div>
+                <div class="line">1️⃣2️⃣2️⃣ 1️⃣0️⃣8️⃣ 8️⃣1️⃣</div>
+                <div class="line">1️⃣1️⃣0️⃣ 1️⃣1️⃣1️⃣ 7️⃣5️⃣</div>
+                <div class="line">4️⃣7️⃣ 5️⃣5️⃣ 7️⃣0️⃣</div>
+                <div class="line">9️⃣7️⃣ 7️⃣6️⃣ 6️⃣8️⃣</div>
+                <div class="line">9️⃣7️⃣ 7️⃣6️⃣ 7️⃣0️⃣</div>
+                <div class="line">7️⃣6️⃣ 5️⃣3️⃣ 9️⃣8️⃣</div>
+                <div class="line">7️⃣2️⃣ 5️⃣7️⃣ 9️⃣0️⃣</div>
+                <div class="line">1️⃣1️⃣9️⃣ 5️⃣7️⃣ 5️⃣4️⃣</div>
+                <div class="line">5️⃣6️⃣ 1️⃣0️⃣0️⃣ 6️⃣6️⃣</div>
+                <div class="line">6️⃣5️⃣ 7️⃣9️⃣ 4️⃣7️⃣</div>
+                <div class="line">1️⃣1️⃣1️⃣ 1️⃣0️⃣5️⃣ 6️⃣5️⃣</div>
+                <div class="line">8️⃣1️⃣ 4️⃣9️⃣ 1️⃣0️⃣5️⃣</div>
+                <div class="line">6️⃣7️⃣ 1️⃣1️⃣8️⃣ 7️⃣2️⃣</div>
+                <div class="line">5️⃣4️⃣ 5️⃣1️⃣ 1️⃣2️⃣2️⃣</div>
+                <div class="line">9️⃣8️⃣ 1️⃣0️⃣1️⃣ 1️⃣1️⃣0️⃣</div>
+                <div class="line">1️⃣0️⃣9️⃣ 1️⃣0️⃣9️⃣ 4️⃣9️⃣</div>
+                <div class="line">1️⃣1️⃣1️⃣ 5️⃣2️⃣ 5️⃣4️⃣</div>
+                <div class="line">5️⃣6️⃣ 6️⃣6️⃣ 5️⃣3️⃣</div>
+                <div class="line">8️⃣7️⃣ 1️⃣0️⃣7️⃣ 7️⃣2️⃣</div>
+                <div class="line">1️⃣2️⃣2️⃣ 9️⃣0️⃣ 9️⃣8️⃣</div>
+                <div class="line">5️⃣0️⃣ 1️⃣2️⃣2️⃣ 8️⃣2️⃣</div>
+                <div class="line">8️⃣5️⃣ 5️⃣0️⃣ 5️⃣6️⃣</div>
+                <div class="line">1️⃣1️⃣3️⃣ 7️⃣4️⃣ 6️⃣5️⃣</div>
+                <div class="line">1️⃣1️⃣8️⃣ 5️⃣4️⃣ 1️⃣1️⃣7️⃣</div>
+                <div class="line">7️⃣8️⃣ 8️⃣7️⃣ 6️⃣6️⃣</div>
+                <div class="line">5️⃣2️⃣ 5️⃣3️⃣ 1️⃣0️⃣5️⃣</div>
+                <div class="line">5️⃣3️⃣ 8️⃣8️⃣ 1️⃣0️⃣6️⃣</div>
+                <div class="line">8️⃣5️⃣ 9️⃣8️⃣ 1️⃣2️⃣0️⃣</div>
+                <div class="line">8️⃣9️⃣ 8️⃣9️⃣ 1️⃣1️⃣4️⃣</div>
+                <div class="line">7️⃣4️⃣ 7️⃣1️⃣ 8️⃣0️⃣</div>
+                <div class="line">5️⃣6️⃣ 9️⃣9️⃣ 1️⃣0️⃣6️⃣</div>
+                <div class="line">1️⃣1️⃣8️⃣ 1️⃣1️⃣0️⃣ 7️⃣4️⃣</div>
+                <div class="line">1️⃣0️⃣8️⃣ 1️⃣0️⃣6️⃣ 1️⃣1️⃣7️⃣</div>
+                <div class="line">5️⃣5️⃣ 1️⃣1️⃣2️⃣ 4️⃣8️⃣</div>
+                <div class="line">9️⃣7️⃣ 9️⃣0️⃣ 5️⃣5️⃣</div>
+                <div class="line">8️⃣5️⃣ 7️⃣4️⃣ 5️⃣1️⃣</div>
+                <div class="line">5️⃣6️⃣ 1️⃣2️⃣0️⃣ 6️⃣6️⃣</div>
+                <div class="line">5️⃣2️⃣ 1️⃣0️⃣5️⃣ 8️⃣6️⃣</div>
+                <div class="line">8️⃣6️⃣ 5️⃣6️⃣ 5️⃣2️⃣</div>
+                <div class="line">5️⃣0️⃣ 9️⃣8️⃣ 9️⃣7️⃣</div>
+                <div class="line">7️⃣0️⃣ 1️⃣0️⃣9️⃣ 6️⃣9️⃣</div>
+                <div class="line">8️⃣5️⃣ 9️⃣9️⃣ 1️⃣1️⃣8️⃣</div>
+                <div class="line">1️⃣0️⃣1️⃣ 7️⃣3️⃣ 8️⃣7️⃣</div>
+                <div class="line">4️⃣3️⃣ 1️⃣1️⃣3️⃣ 7️⃣1️⃣</div>
+                <div class="line">1️⃣1️⃣0️⃣ 7️⃣6️⃣ 5️⃣1️⃣</div>
+                <div class="line">7️⃣9️⃣ 1️⃣0️⃣3️⃣ 8️⃣1️⃣</div>
+                <div class="line">6️⃣6️⃣ 5️⃣1️⃣ 1️⃣2️⃣0️⃣</div>
+                <div class="line">9️⃣0️⃣ 1️⃣2️⃣0️⃣ 7️⃣9️⃣</div>
+                <div class="line">4️⃣9️⃣ 8️⃣3️⃣ 1️⃣1️⃣5️⃣</div>
+                <div class="line">5️⃣4️⃣ 5️⃣0️⃣ 1️⃣2️⃣1️⃣</div>
+                <div class="line">5️⃣7️⃣ 8️⃣0️⃣ 1️⃣2️⃣2️⃣</div>
+                <div class="line">1️⃣1️⃣0️⃣ 4️⃣8️⃣ 7️⃣9️⃣</div>
+                <div class="line">1️⃣0️⃣0️⃣ 8️⃣4️⃣ 1️⃣1️⃣6️⃣</div>
+                <div class="line">8️⃣8️⃣ 7️⃣8️⃣ 1️⃣0️⃣2️⃣</div>
+                <div class="line">8️⃣8️⃣ 6️⃣7️⃣ 7️⃣2️⃣</div>
+                <div class="line">7️⃣2️⃣ 9️⃣7️⃣ 8️⃣4️⃣</div>
+                <div class="line">7️⃣5️⃣ 5️⃣1️⃣ 1️⃣0️⃣2️⃣</div>
+                <div class="line">1️⃣0️⃣8️⃣ 4️⃣9️⃣ 5️⃣0️⃣</div>
+                <div class="line">5️⃣2️⃣ 1️⃣0️⃣1️⃣ 5️⃣5️⃣</div>
+                <div class="line">4️⃣8️⃣ 5️⃣3️⃣ 7️⃣0️⃣</div>
+                <div class="line">7️⃣3️⃣ 9️⃣8️⃣ 5️⃣4️⃣</div>
+                <div class="line">1️⃣1️⃣7️⃣ 1️⃣1️⃣8️⃣ 9️⃣9️⃣</div>
+                <div class="line">1️⃣0️⃣7️⃣ 1️⃣0️⃣2️⃣ 9️⃣8️⃣</div>
+                <div class="line">1️⃣1️⃣7️⃣ 7️⃣0️⃣ 6️⃣5️⃣</div>
+                <div class="line">7️⃣1️⃣ 1️⃣0️⃣2️⃣ 1️⃣0️⃣4️⃣</div>
+                <div class="line">6️⃣9️⃣ 4️⃣8️⃣ 8️⃣0️⃣</div>
+                <div class="line">8️⃣6️⃣ 7️⃣4️⃣ 1️⃣0️⃣1️⃣</div>
+                <div class="line">1️⃣0️⃣9️⃣ 7️⃣4️⃣ 1️⃣2️⃣2️⃣</div>
+                <div class="line">1️⃣1️⃣0️⃣ 1️⃣0️⃣2️⃣ 4️⃣3️⃣</div>
+                <div class="line">7️⃣9️⃣ 1️⃣2️⃣1️⃣ 7️⃣0️⃣</div>
+                <div class="line">1️⃣1️⃣7️⃣ 1️⃣2️⃣1️⃣ 6️⃣8️⃣</div>
+                <div class="line">8️⃣5️⃣ 1️⃣1️⃣2️⃣ 1️⃣1️⃣8️⃣</div>
+                <div class="line">1️⃣1️⃣2️⃣ 5️⃣7️⃣ 5️⃣2️⃣</div>
+                <div class="line">1️⃣0️⃣0️⃣ 1️⃣2️⃣2️⃣ 1️⃣0️⃣5️⃣</div>
+                <div class="line">4️⃣8️⃣ 8️⃣0️⃣ 6️⃣7️⃣</div>
+                <div class="line">1️⃣0️⃣2️⃣ 1️⃣0️⃣1️⃣ 7️⃣4️⃣</div>
+                <div class="line">9️⃣9️⃣ 8️⃣0️⃣ 5️⃣1️⃣</div>
+                <div class="line">5️⃣1️⃣ 1️⃣2️⃣2️⃣ 1️⃣0️⃣3️⃣</div>
+                <div class="line">1️⃣0️⃣0️⃣ 6️⃣6️⃣ 1️⃣1️⃣6️⃣</div>
+                <div class="line">8️⃣3️⃣ 8️⃣4️⃣ 8️⃣7️⃣</div>
+                <div class="line">1️⃣1️⃣0️⃣ 8️⃣2️⃣ 1️⃣1️⃣7️⃣</div>
+                <div class="line">4️⃣7️⃣ 1️⃣0️⃣6️⃣ 1️⃣0️⃣7️⃣</div>
+                <div class="line">9️⃣7️⃣ 4️⃣8️⃣ 1️⃣0️⃣0️⃣</div>
+                <div class="line">7️⃣7️⃣ 1️⃣0️⃣9️⃣ 5️⃣1️⃣</div>
+                <div class="line">8️⃣5️⃣ 4️⃣7️⃣ 8️⃣1️⃣</div>
+                <div class="line">5️⃣2️⃣ 4️⃣8️⃣ 7️⃣2️⃣</div>
+                <div class="line">1️⃣0️⃣2️⃣ 7️⃣6️⃣ 4️⃣7️⃣</div>
+                <div class="line">9️⃣8️⃣ 8️⃣2️⃣ 8️⃣5️⃣</div>
+                <div class="line">5️⃣7️⃣ 5️⃣3️⃣ 1️⃣0️⃣5️⃣</div>
+                <div class="line">5️⃣5️⃣ 7️⃣8️⃣ 4️⃣3️⃣</div>
+                <div class="line">5️⃣0️⃣ 7️⃣1️⃣ 8️⃣5️⃣</div>
+                <div class="line">1️⃣0️⃣9️⃣ 5️⃣2️⃣ 8️⃣2️⃣</div>
+                <div class="line">9️⃣7️⃣ 8️⃣0️⃣ 8️⃣7️⃣</div>
+                <div class="line">4️⃣7️⃣ 5️⃣4️⃣ 5️⃣2️⃣</div>
+                <div class="line">5️⃣3️⃣ 5️⃣4️⃣ 7️⃣8️⃣</div>
+                <div class="line">8️⃣8️⃣ 8️⃣0️⃣ 7️⃣2️⃣</div>
+                <div class="line">1️⃣0️⃣3️⃣ 4️⃣9️⃣ 7️⃣7️⃣</div>
+                <div class="line">1️⃣2️⃣2️⃣ 1️⃣1️⃣9️⃣ 1️⃣0️⃣6️⃣</div>
+                <div class="line">5️⃣1️⃣ 9️⃣0️⃣ 8️⃣7️⃣</div>
+                <div class="line">8️⃣1️⃣ 1️⃣0️⃣9️⃣ 8️⃣9️⃣</div>
+                <div class="line">1️⃣0️⃣2️⃣ 1️⃣1️⃣4️⃣ 4️⃣8️⃣</div>
+                <div class="line">1️⃣1️⃣9️⃣ 1️⃣0️⃣5️⃣ 1️⃣0️⃣0️⃣</div>
+                <div class="line">6️⃣7️⃣ 7️⃣9️⃣ 5️⃣1️⃣</div>
+                <div class="line">7️⃣1️⃣ 8️⃣8️⃣ 6️⃣7️⃣</div>
+                <div class="line">7️⃣0️⃣ 1️⃣0️⃣9️⃣ 7️⃣7️⃣</div>
+                <div class="line">7️⃣3️⃣ 1️⃣1️⃣1️⃣ 7️⃣5️⃣</div>
+                <div class="line">1️⃣0️⃣5️⃣ 1️⃣0️⃣8️⃣ 1️⃣1️⃣9️⃣</div>
+                <div class="line">1️⃣1️⃣2️⃣ 8️⃣3️⃣ 6️⃣5️⃣</div>
+                <div class="line">1️⃣2️⃣0️⃣ 1️⃣1️⃣0️⃣ 5️⃣4️⃣</div>
+                <div class="line">7️⃣5️⃣ 4️⃣9️⃣ 6️⃣8️⃣</div>
+                <div class="line">1️⃣1️⃣6️⃣ 6️⃣7️⃣ 7️⃣2️⃣</div>
+                <div class="line">5️⃣7️⃣ 1️⃣0️⃣4️⃣ 8️⃣3️⃣</div>
+                <div class="line">7️⃣0️⃣ 6️⃣9️⃣ 1️⃣1️⃣5️⃣</div>
+                <div class="line">7️⃣4️⃣ 7️⃣2️⃣ 8️⃣0️⃣</div>
+                <div class="line">5️⃣7️⃣ 1️⃣1️⃣6️⃣ 9️⃣0️⃣</div>
+                <div class="line">7️⃣2️⃣ 7️⃣0️⃣ 7️⃣0️⃣</div>
+                <div class="line">7️⃣3️⃣ 1️⃣1️⃣1️⃣ 1️⃣1️⃣8️⃣</div>
+                <div class="line">1️⃣0️⃣2️⃣ 8️⃣8️⃣ 6️⃣7️⃣</div>
+                <div class="line">5️⃣5️⃣ 1️⃣1️⃣8️⃣ 1️⃣0️⃣5️⃣</div>
+                <div class="line">8️⃣8️⃣ 1️⃣2️⃣1️⃣ 9️⃣0️⃣</div>
+                <div class="line">8️⃣1️⃣ 1️⃣1️⃣0️⃣ 8️⃣3️⃣</div>
+                <div class="line">6️⃣9️⃣ 1️⃣1️⃣8️⃣ 4️⃣9️⃣</div>
+                <div class="line">8️⃣8️⃣ 5️⃣7️⃣ 9️⃣9️⃣</div>
+                <div class="line">6️⃣9️⃣ 7️⃣8️⃣ 1️⃣0️⃣1️⃣</div>
+                <div class="line">1️⃣1️⃣8️⃣ 6️⃣7️⃣ 6️⃣5️⃣</div>
+                <div class="line">1️⃣1️⃣9️⃣ 6️⃣5️⃣ 6️⃣5️⃣</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Show content and play audio on button click
+        document.getElementById("click-button").onclick = function() {
+            const audio = document.getElementById("audio");
+            const content = document.getElementById("content");
+            this.style.display = "none";
+            content.style.display = "block";
+            audio.play().catch(error => {
+                console.error("Audio playback failed:", error);
+            });
+        };
+    </script>
+</body>
+</html>
