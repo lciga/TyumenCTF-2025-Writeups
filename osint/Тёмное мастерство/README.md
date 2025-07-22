@@ -1,6 +1,4 @@
-**Тёмное мастерство**
-
-Категория: osint
+# Тёмное мастерство
 
 _В нашу лабораторию анализа вредоносного ПО попал интересный ретро-экземпляр. Однако он оказался не самым простым — через какое-то время вирус уничтожил сам себя, оставив лишь одну странную зацепку. Кажется, его создатель любил не только разрушать системы, но и оставлять свой след в истории…_
 
@@ -8,23 +6,20 @@ _Сможешь выяснить, кто стоял за этой цифрово
 
 _Флаг в виде TyumenCTF{flag}, где flag - ICQ злоумышленника._
 
-Выдать участникам:
-kaze.JPG
-
-Решение:
+## Решение
 
 1.     На картинке указана полезная нагрузка вируса – BSOD с сообщением. По понятным причинам последняя строка зацензурена, но решению задания это не мешает. Гуглим фразу: "I AM KAMIKAZE YOR COMPUTER FULL CRASH"
 
-2.     Находим единственный релевантный результат — wikidot-сайт, описывающий различные варианты вируса Kamikaze (Win9x.Kaze). Он недоступен без VPN, поэтому подрубаем и переходим на сайт. В качестве альтернативы, если нет VPN, можно зайти на него с Wayback Machine. [http://virus.wikidot.com/kamikaze](http://virus.wikidot.com/kamikaze) (с VPN) или [https://web.archive.org/web/20241110115917/http://virus.wikidot.com/kamikaze](https://web.archive.org/web/20241110115917/http:/virus.wikidot.com/kamikaze) (без VPN)
+2.     Находим единственный релевантный результат — wikidot-сайт, описывающий различные варианты вируса Kamikaze (Win9x.Kaze). Он недоступен без VPN, поэтому подрубаем и переходим на сайт. В качестве альтернативы, если нет VPN, можно зайти на него с Wayback Machine [с VPN](http://virus.wikidot.com/kamikaze) или [без VPN](https://web.archive.org/web/20241110115917/http:/virus.wikidot.com/kamikaze).
 
-3.     Указано, что вирус создал хакер из Японии — BlackArt (название задания – своеобразная подсказка). В конце страницы wikidot находим ссылки на его старые сайты. Они недоступны напрямую, но их можно посмотреть через Wayback Machine. Необходимый для нас сайт — First BlackArt Site — [https://web.archive.org/web/20010721052736/http://blackart.cjb.net:80/](https://web.archive.org/web/20241110115917/https:/web.archive.org/web/20010721052736/http:/blackart.cjb.net:80/)
+3.     Указано, что вирус создал хакер из Японии — BlackArt (название задания – своеобразная подсказка). В конце страницы wikidot находим ссылки на его старые сайты. Они недоступны напрямую, но их можно посмотреть через Wayback Machine. Необходимый для нас сайт [First BlackArt Site](https://web.archive.org/web/20241110115917/https:/web.archive.org/web/20010721052736/http:/blackart.cjb.net:80/).
 
 4.     Заходим в архивированную версию сайта и на первом же capture в конце страницы видим строку:
 
 [blackart@computervirus.org] [PGP key] [ICQ: 95400681]
 
-![[Pasted image 20250419011751.png]]
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/osint/%D0%A2%D1%91%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE/writeup/Pasted%20image%2020250419011751.png)
 
 5.     Вставляем полученный ICQ в наш флаг.
-
-**TyumenCTF{95400681}**
+# Флаг
+`TyumenCTF{95400681}`
