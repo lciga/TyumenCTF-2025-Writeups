@@ -1,0 +1,13 @@
+services:
+  tyumenctf2025_counter:
+    build: .
+    ports:
+      - "5011:5011"
+    deploy:
+      resources:
+        requests:
+          cpus: '0.25'
+          memory: 128M
+        limits:
+          cpus: '0.5'
+          memory: 256M

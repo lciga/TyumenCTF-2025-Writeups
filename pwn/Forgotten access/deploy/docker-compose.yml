@@ -1,0 +1,13 @@
+services:
+  tyumenctf2025_access:
+    build: .
+    ports:
+      - "5012:5012"
+    deploy:
+      resources:
+        requests:
+          cpus: '0.25'
+          memory: 128M
+        limits:
+          cpus: '0.5'
+          memory: 256M
