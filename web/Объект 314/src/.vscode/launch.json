@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "type": "cppdbg",
+      "request": "launch",
+      "name": "cargo run -p totp",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/target/debug/totp",
+      "environment": [
+        {
+          "name": "RUST_BACKTRACE",
+          "value": "short"
+        },
+        {
+          "name": "RUSTC_TOOLCHAIN",
+          "value": "/home/system404/.rustup/toolchains/stable-x86_64-unknown-linux-gnu"
+        }
+      ],
+      "args": [],
+      "sourceFileMap": {},
+      "osx": {
+        "MIMode": "lldb"
+      }
+    }
+  ]
+}

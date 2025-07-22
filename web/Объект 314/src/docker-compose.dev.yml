@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17.4-alpine
+    environment:
+      - POSTGRES_USER=totp
+      - POSTGRES_PASSWORD=totp
+      - POSTGRES_DB=totp
+    ports:
+      - 5432:5432
+
+  mainframe:
+    build: mainframe
+    hostname: mainframe
+    environment:
+      - POSTGRES_DB=blackshift_core
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=mnogochlen
+    ports:
+      - 2222:22

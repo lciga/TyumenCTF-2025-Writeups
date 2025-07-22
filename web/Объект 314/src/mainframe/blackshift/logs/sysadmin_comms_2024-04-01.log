@@ -1,0 +1,11 @@
+[10:42:08] ivan.chernov: срочно смените пароль от postgres
+[10:42:14] ivan.chernov: кто-то пытался залогиниться с терминала в спортзале
+[10:42:28] galina.rudaya: опять 066?
+[10:42:35] ivan.chernov: логин: headmaster, база: blackshift_core
+[10:42:39] ivan.chernov: пароль тот же, с 2023 года))
+
+[10:43:01] galina.rudaya: а что он мог там увидеть?
+[10:43:11] ivan.chernov: таблицу `students_anomalies`, например
+[10:43:27] galina.rudaya: ?! O_O
+
+[10:43:41] ivan.chernov: я не шучу. лучше поторопись. пока не поздно.

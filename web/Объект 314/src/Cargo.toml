@@ -1,0 +1,29 @@
+[package]
+name = "totp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-proxy = "0.2.0"
+actix-web = { version = "4.10.2", features = ["cookies"] }
+argon2 = { version = "0.5.3", features = ["simple", "std"] }
+awc = "3.6.0"
+flexi_logger = "0.30.1"
+hmac = { version = "0.12.1", features = ["std"] }
+jwt = "0.16.0"
+log = "0.4.27"
+russh = "0.51.1"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+sha2 = { version = "0.10.8", features = ["std"] }
+sqlx = { version = "0.8.3", features = ["runtime-tokio", "postgres", "migrate", "derive", "macros", "uuid"] }
+thiserror = "2.0.12"
+tokio = { version = "1.44.2", features = ["full"] }
+totp-rs = { version = "5.6.0", features = ["qr"] }
+uuid = { version = "1.16.0", features = ["v4"] }
+vt100 = "0.15.2"
+actix-ws = "0.3.0"
+futures = "0.3.31"
+actix-ws-proxy = "0.1.2"
+actix-files = "0.6.6"
+dotenv = "0.15.0"

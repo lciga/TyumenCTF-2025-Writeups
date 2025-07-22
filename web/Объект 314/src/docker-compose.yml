@@ -1,0 +1,38 @@
+services:
+  totp:
+    build: .
+    ports:
+      - 5008:8080
+    environment:
+      - DATABASE_URL=postgres://totp:totp@postgres:5432/totp
+      - SSH_ADDR=mainframe:22
+      - SSH_USER=headmaster
+      - SSH_PASSWORD=how-do-you-know
+    networks:
+      - web
+      - mainframe
+
+  mainframe:
+    build: mainframe
+    hostname: mainframe
+    environment:
+      - POSTGRES_DB=blackshift_core
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=mnogochlen
+    networks:
+      - mainframe
+    ports:
+      - 5007:22
+
+  postgres:
+    image: postgres:17.4
+    environment:
+      - POSTGRES_USER=totp
+      - POSTGRES_PASSWORD=totp
+      - POSTGRES_DATABSE=totp
+    networks:
+      - web
+
+networks:
+  mainframe:
+  web:

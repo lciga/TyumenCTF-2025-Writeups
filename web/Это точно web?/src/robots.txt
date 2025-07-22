@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /
 
 # CTF flag:
-# Tyumen{Yes_1t_1s-w3b}
+# TyumenCTF{Yes_1t_1s-w3b}
