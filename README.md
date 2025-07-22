@@ -31,9 +31,9 @@
 
 | Таск                    | Райтап                              |
 | ----------------------- | ----------------------------------- |
-| Too many redirects      | [Готов](./web/Too%many%redirects/)  |
-| Это точно web?          | [Готов](./web/Это%точно%web?/README.md)      |
-| Coomiter                | [Готов](./web/Coomiter/)            |
+| Too many redirects      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Too%20many%20redirects/README.md)  |
+| Это точно web?          | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/%D0%AD%D1%82%D0%BE%20%D1%82%D0%BE%D1%87%D0%BD%D0%BE%20web%3F/README.md)      |
+| Coomiter                | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/README.md)            |
 | Объект 314              | [Готов](./web/Объект%314/)          |
 
 ## Reverse
