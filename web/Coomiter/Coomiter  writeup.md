@@ -1,13 +1,23 @@
 ## Enumeration:
-Заходим на страницу, наблюдаем окно входа:![[Pasted image 20250413152502.png]]
+Заходим на страницу, наблюдаем окно входа:
+
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413152448.png)
 
 Проверяем наличие `robots.txt`:
-![[Pasted image 20250413152642.png]]
 
-Видим содержимое директории `/.git/`:![[Pasted image 20250413152735.png]]
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413152642.png)
 
- Тем не менее не обнаруживаем директории `logs`:![[Pasted image 20250413152856.png]]
-При посещении этой директории получаем 403:![[Pasted image 20250413152955.png]]
+Видим содержимое директории `/.git/`:
+
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413152735.png)
+
+Тем не менее не обнаруживаем директории `logs`:
+
+ ![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413152856.png)
+ 
+При посещении этой директории получаем 403:
+
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413152955.png)
 
 ## Exploitation
 
@@ -15,8 +25,10 @@
 https://github.com/arthaud/git-dumper
 
 Кроме него есть и другие инструменты:
-GitTools:[internetwache/GitTools: A repository with 3 tools for pwn'ing websites with .git repositories available](https://github.com/internetwache/GitTools)
-GitHack:[lijiejie/GitHack: A `.git` folder disclosure exploit](https://github.com/lijiejie/GitHack)
+
+GitTools: https://github.com/internetwache/GitTools
+
+GitHack: https://github.com/lijiejie/GitHack
 
 Скачиваем скрипт:
 `git clone https://github.com/arthaud/git-dumper`
@@ -25,10 +37,11 @@ GitHack:[lijiejie/GitHack: A `.git` folder disclosure exploit](https://github.co
 `pip3 install -r requirements.txt`
 
 Если увидите предупреждение:
-![[Pasted image 20250413154115.png]]
+
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413154115.png)
+
 Используйте:
 `pip3 install -r requirements.txt --break-system-packages`
-
 
 Запускаем скрипт:
 `python3 git_dumper.py  http://localhost:8000/.git/ ~/directory`
@@ -36,10 +49,13 @@ GitHack:[lijiejie/GitHack: A `.git` folder disclosure exploit](https://github.co
 Скрипт выгружает директорию /.git, которую мы можем исследовать:![[Pasted image 20250413154341.png]]
 
 Проверим коммиты:
-![[Pasted image 20250413154408.png]]
+
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413154408.png)
 
 В коммитах обнаруживаем учетные данные:
 `ServiceAdmin:jtBfru89XC`
 
 Заходим обратно на веб страницу, вводим данные, получаем флаг:
-![[Pasted image 20250413154601.png]]
+
+
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/writeup/Pasted%20image%2020250413154601.png)
