@@ -1,0 +1,7 @@
+services:
+  homework:
+    build: .
+    ports:
+      - 5019:8080
+    volumes:
+      - ./var:/var
