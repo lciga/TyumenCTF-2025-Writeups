@@ -13,19 +13,19 @@
 
 | Таск                    | Райтап                               |
 | ----------------------- | ------------------------------------ |
-| SELECT * FROM           | [Готов](./forensic/SELECT%*%FROM)    | 
-| Битый сектор            | [Готов](./forensic/Битый%сектор/)    |
-| T1053.005               | [Готов](./forensic/T1053.005/)       |
-| 272+273=8               | [Готов](./forensic/272+273=8/)       |
+| SELECT * FROM           | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/SELECT%20*%20FROM/README.md)    | 
+| Битый сектор            | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/%D0%91%D0%B8%D1%82%D1%8B%D0%B9%20%D1%81%D0%B5%D0%BA%D1%82%D0%BE%D1%80/README.md)    |
+| T1053.005               | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/T1053.005/README.md)       |
+| 272+273=8               | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/272%2B273%3D8/README.md)       |
 
 ## Joy
 
 | Таск                    | Райтап                               |
 | ----------------------- | ------------------------------------ |
-| ULTIMATE SNEK GAME      | [Готов](./joy/ULTIAMTE%SNEK%GAME/)   |
-| TyumenCTF{fake_flag}    | [Готов](./joy/TyumeCTF{fake_flag}/)  |
-| Крякнуто с любовью      | [Готов](./joy/Крякнуто%с%любовью/)   |
-| Kaboom!                 | [Готов](./joy/Kaboom!/)              |
+| ULTIMATE SNEK GAME      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main//joy/ULTIAMTE%20SNEK%20GAME/)   |
+| TyumenCTF{fake_flag}    | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/TyumenCTF%7Bfake_flag%7D/README.md)  |
+| Крякнуто с любовью      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/README.md)   |
+| Kaboom!                 | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/Kaboom!/README.md)              |
 
 ## Web
 
