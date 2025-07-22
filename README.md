@@ -34,7 +34,7 @@
 | Too many redirects      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Too%20many%20redirects/README.md)  |
 | Это точно web?          | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/%D0%AD%D1%82%D0%BE%20%D1%82%D0%BE%D1%87%D0%BD%D0%BE%20web%3F/README.md)      |
 | Coomiter                | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/Coomiter/README.md)            |
-| Объект 314              | [Готов](./web/Объект%314/)          |
+| Объект 314              | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/web/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%20314/README.md)          |
 
 ## Reverse
 
