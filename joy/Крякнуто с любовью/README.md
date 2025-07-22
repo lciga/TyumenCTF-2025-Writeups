@@ -21,7 +21,7 @@
 
 Обычный файл PNG имеет понятную и однородную структуру, в то время как наш ReservedLogo.png наполнен мусором и явно скрытыми данными.
 
-![](Pasted%20image%2020250407013742.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/writeup/Pasted%20image%2020250407013742.png)
 
 Слева — наш файл, справа, его оригинальная версия. Все PNG файлы имеют однородную структуру.
 Не обязательно внимательно всматриваться, достаточно просто пробежаться по коду сверху вниз, чтобы заметить аномалию. 
@@ -35,7 +35,7 @@ binwalk ReservedLogo.png
 
 В первых же строках видим упоминание архива
 
-![](Pasted%20image%2020250407014007.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/writeup/Pasted%20image%2020250407014007.png)
 
 ---
 Теперь нам нужно извлечь флаг. Зная, что мы имеем дело с архивом, у нас есть несколько вариантов
@@ -44,14 +44,14 @@ binwalk ReservedLogo.png
 	1. Открываем файл в файловом менеджере WinRAR, нажимая "Показать содержимое архива"
 	2. Нас там ждём несколько мусорных файлов и самое главное: txt-шник с флагом!
 	
-	[](Pasted%20image%2020250407014350.png)
+	[](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/writeup/Pasted%20image%2020250407014350.png)
 
-	![](Pasted%20image%2020250407014419.png)
+	![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/writeup/Pasted%20image%2020250407014419.png)
 
 2) 7-Zip
 	1) Просто открываем файл `ReservedLogo.png` двойным кликом и видим содержимое архива
 
-	![](Pasted%20image%2020250407014547.png)
+	![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/writeup/Pasted%20image%2020250407014547.png)
 
 3) strings
 	Покажу на примере команды strings на Linux, но извлекать строки можно и через другие программы, тот же WinRAR
@@ -59,7 +59,7 @@ binwalk ReservedLogo.png
 	
 	Пропишем команду `strings ReservedLogo.png | grep TyumenCTF`, и получим сразу же извлечённый флаг
 
-	![](Pasted%20image%2020250407014919.png)
+	![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/writeup/Pasted%20image%2020250407014919.png)
 
 ## Флаг
 `TyumenCTF{p1r4cy_1s_b4d_bu7_0ld_g4m3z_4r3_h4rd_2_buy}
