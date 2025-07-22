@@ -1,0 +1,8 @@
+services:
+  kaboom:
+    build: .
+    environment:
+      - FLAG="Y3S R1CO K4B00M"
+      - DOT_DURATION=2000
+    ports:
+      - "5018:8080"
