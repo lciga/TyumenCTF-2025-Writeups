@@ -8,7 +8,7 @@
 ### Решение 1: DB Browser for SQLite
 Открываем наш файл в программе и на вкладке `Browse Data` мы можем просматривать таблицы. Мы знаем, что что-то должны шифровать, но это сделано не было, очевидно что это какие-то учётные данные. Находим в БД две таблицы, в которых может быть зацепка - `employee_credentail` и `cutomer_credentail`. Изучив таблицы мы находим флаг.
 
-![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/SELECT%20*%20FROM/writeup/https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/SELECT%20*%20FROM/writeup/Pasted%20image%2020250412113245.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/SELECT%20*%20FROM/writeup/Pasted%20image%2020250412113245.png)
 
 ### Решение 2: Strings
 Попробуем посмотреть содержимое файла через утилиту Linux `strings`:
