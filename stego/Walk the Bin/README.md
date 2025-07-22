@@ -25,6 +25,7 @@ flag.txt пустой, т.к. binwalk попытался вытащить его
 3.     Открываем архив и видим тот же flag.txt, но открыть его сразу не получится, т.к. он защищён паролем. Необходимо либо вручную через шестнадцатеричный редактор найти необходимую строку, либо использовать strings, что легче.
 
 ![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/stego/Walk%20the%20Bin/writeup/Pasted%20image%2020250419023647.png)
+
 ![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/stego/Walk%20the%20Bin/writeup/Pasted%20image%2020250419023655.png)
 
 Пароль от архива – binwalk.
