@@ -6,13 +6,13 @@
 
 1.     Запустив программу, замечаем, что она ожидает ввод строки. При вводе неправильного флага выводится сообщение:
 
-![](Pasted%20image%2020250419023904.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/Python%20rev/writeup/Pasted%20image%2020250419023904.png)
 
 Значит, программа сравнивает введённую строку с каким-то заданным в коде значением (спойлер – расшифрованный массив из expected)
 
 2.     Прогоняем программу через [pyinstxtractor](https://pyinstxtractor-web.netlify.app/) и получаем архив. Нас интересует toxor.pyc
 
-![](Pasted%20image%2020250419023912.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/Python%20rev/writeup/Pasted%20image%2020250419023912.png)
 
 3.     Декомпилируем .pyc с помощью любого инструмента, онлайн сервиса, в нашем случае хватит [pylingual](https://pylingual.io/)
 

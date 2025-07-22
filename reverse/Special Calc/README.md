@@ -5,13 +5,13 @@ _Калькулятор с секретом_
 # Решение
 1.     При запуске программы видим простой калькулятор, однако, как сказано в описании, он с секретом. Прогоняем его через DetectItEasy:
 
-![](Pasted%20image%2020250419023738.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/Special%20Calc/writeup/Pasted%20image%2020250419023738.png)
 
 Из программ, собранных PyInstaller’ом, можно достать .pyc файлы и декомпилировать их. Загружаем наш калькулятор в pyinstxtractor, например, веб-версию: [pyinstxtractor/](https://pyinstxtractor-web.netlify.app/)
 
 2.     Получаем архив. Из всех файлов нас интересует только calc.pyc
 
-![](Pasted%20image%2020250419023746.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/Special%20Calc/writeup/Pasted%20image%2020250419023746.png)
 
 3.     Для декомпиляции воспользуемся, например, [pylingual](https://pylingual.io/)
 
@@ -90,9 +90,9 @@ def get_mnumber():
 
 4.     Вводим получившееся значение в калькулятор, нажимаем “=” и получаем флаг.
 
-![](Pasted%20image%2020250419023800.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/Special%20Calc/writeup/Pasted%20image%2020250419023800.png)
 
-![](Pasted%20image%2020250419023810.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/Special%20Calc/writeup/Pasted%20image%2020250419023810.png)
 
 # Флаг
 `TyumenCTF{b4by_c4lc_ju5t_g1v3_m3_fl4g}`

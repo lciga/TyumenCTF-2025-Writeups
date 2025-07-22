@@ -7,74 +7,74 @@
 
 DetectItEasy:
 
-![](Pasted%20image%2020250419024229.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024229.png)
 
 HxD:
 
-![](Pasted%20image%2020250419024244.png) 
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024244.png) 
 
-![](Pasted%20image%2020250419024251.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024251.png)
 
 2.	Ищем упаковщик UPX 4.2.4 (UPX 4.24) и скачиваем его с официального GitHub репозитория. Нам нужна версия upx-4.2.4-win64.zip 
 
-![](Pasted%20image%2020250419024317.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024317.png)
 
 3.	Перемещаем крякми в папку с UPX и распаковываем его с параметром -d.
 `upx -d niceone.exe`
 
-![](Pasted%20image%2020250419024323.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024323.png)
 
 4.	Запускаем крякми – он приветствует нас строкой:
 
-![](Pasted%20image%2020250419024327.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024327.png)
 
 Если попробуем ввести случайный пароль, получаем “Wrong password”. Соответственно, нам нужно найти правильный пароль.
 
-![](Pasted%20image%2020250419024329.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024329.png)
 
 5.	Снова воспользуемся отладчиком, так как теперь программа распакована, код будет читаемым. Запускаем (нажимаем “Выполнить” один раз, чтобы войти в модуль niceone.exe) и ставим точку останова после цикла расшифровки пароля, но перед сравнением с вводом.
 
-![](Pasted%20image%2020250419024334.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024334.png)
 
 Теперь можно запустить программу снова (“Выполнить”) и так же ввести любой пароль. По нажатии Enter после ввода программа остановится на выделенной нами команде и мы увидим правильный пароль в RDI.
 
- ![](Pasted%20image%2020250419024340.png)
+ ![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024340.png)
 
- ![](Pasted%20image%2020250419024343.png)
+ ![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024343.png)
 
 Это “heap”. \r – символ возврата каретки.
 6.	Теперь при обычном запуске программы и вводе правильного пароля видим сообщение:
 
-![](Pasted%20image%2020250419024346.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024346.png)
 
 Но флаг не выводится. Значит, он спрятан где-то в памяти.
 Возвращаемся в x64dbg. Обычно после ввода правильного пароля программа программа доходит до функции, где флаг расшифровывается, а после завершается. Ставим точку останова после цикла дешифровки, чтобы не пропустить момент, когда флаг станет читаемым.
 
-![](Pasted%20image%2020250419024351.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024351.png)
 
 7.	Снова запускаем программу, вводим пароль, нажимаем Enter. Программа останавливается в 0x00007FF7C03F1152 и мы видим наш флаг в R9. 
 
-![](Pasted%20image%2020250419024356.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024356.png)
 
-![](Pasted%20image%2020250419024358.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024358.png)
 
 ## Решение 2. Дизассемблирование
 Лично мне этот способ кажется гораздо менее приятным, но он всё ещё остаётся достаточно эффективным. Перед загрузкой файла в дизассемблер мы, конечно, всё так же распаковываем его с помощью UPX.
 1.	Загружаем крякми в любой дизассемблер, например, IDA, Ghidra, Binary Ninja. Переходим к точке входа программы - start по адресу 0x140001000. Видим, что программа начинается с вывода строки “Let’s try something… Password: “ и ожидает наш ввод. Вводимый пароль сохраняется в буфер [rsp+40h+Buffer], и программа читает 5 байт (это наш heap + символ возврата каретки).
 
-![](Pasted%20image%2020250419024408.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024408.png)
 
 2.	По адресу 0x140001063 видим цикл, расшифровывающий зашифрованный пароль из unk_14000304A.
 
-![](Pasted%20image%2020250419024414.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024414.png)
 
-![](Pasted%20image%2020250419024417.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024417.png)
 
 `unk_14000304A   db  0EEh, 0E3h, 0E7h, 0F6h, 8Bh`
 
 3.	В цикле каждый байт XOR-ится с ключом 0x86. 
 
-![](Pasted%20image%2020250419024443.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024443.png)
 
 Выше псевдокод (F5 по функции start). Для удобства можем переименовать переменные (N по переменной). Для понимания:
 v2 -> DecryptedPasswordPtr
@@ -105,16 +105,16 @@ print(password.decode())
 
 4.	В sub_1400010E0 программа выделяет память в куче через HeapAlloc и копирует 32 байта из unk_14000304F в выделенную память:
 
-![](Pasted%20image%2020250419024616.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024616.png)
 
-![](Pasted%20image%2020250419024619.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024619.png)
  
 ```
 unk_14000304F   db  3Ch, 1Ch, 14h, 1Dh, 68h, 06h, 26h, 35h, 36h, 76h, 06h, 54h, 02h, 43h, 52h, 0Ch, 56h, 03h, 05h, 6Ah, 0Fh, 54h, 0Fh, 17h, 52h, 1Bh, 0Eh, 08h, 1Ch, 61h, 12h, 18h
 ```
 Это наш зашифрованный флаг. Байты, указанные выше, xor’ятся с паролем heap\r.
 
-![](Pasted%20image%2020250419024628.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024628.png)
 
 идентично
 ```
@@ -148,7 +148,7 @@ print(dec.decode())
 
 После выполнения получаем флаг.
 
-![](Pasted%20image%2020250419024731.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/reverse/NiceOne%20crackme/writeup/Pasted%20image%2020250419024731.png)
 
 # Флаг
 `TyumenCTF{n1c3_d3bugg1ng_skillz}`
