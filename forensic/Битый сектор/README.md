@@ -23,7 +23,7 @@ stuff.tar (f1x_my)
 
 system.log (1mag3_)
 
-![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/%D0%91%D0%B8%D1%82%D1%8B%D0%B9%20%D1%81%D0%B5%D0%BA%D1%82%D0%BE%D1%80/writeup/Pasted%20image%2020250419025359 1.png)
+![](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/forensic/%D0%91%D0%B8%D1%82%D1%8B%D0%B9%20%D1%81%D0%B5%D0%BA%D1%82%D0%BE%D1%80/writeup/Pasted%20image%20202504190253591.png)
 
 security.cfg (f1l3})
 
