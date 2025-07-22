@@ -22,7 +22,7 @@
 
 | Таск                    | Райтап                               |
 | ----------------------- | ------------------------------------ |
-| ULTIMATE SNEK GAME      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main//joy/ULTIAMTE%20SNEK%20GAME/)   |
+| ULTIMATE SNEK GAME      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/ULTIMATE%20SNEK%20GAME/README.md)   |
 | TyumenCTF{fake_flag}    | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/TyumenCTF%7Bfake_flag%7D/README.md)  |
 | Крякнуто с любовью      | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/%D0%9A%D1%80%D1%8F%D0%BA%D0%BD%D1%83%D1%82%D0%BE%20%D1%81%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%D1%8E/README.md)   |
 | Kaboom!                 | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/joy/Kaboom!/README.md)              |
