@@ -4,10 +4,10 @@
 
 | Таск                    | Райтап                                     |
 | ----------------------- | ------------------------------------------ |
-| Walk the Bin            | [Готов](./stego/Walk%the%Bin/)             |
-| No flag?                | [Готов](./stego/No%flag?/)                 |
-| "Тени неприкаянных" - 1 | [Готов](./stego/"Тени%неприкаянных"%-%1/)  |
-| "Тени неприкаянных" - 2 | [Готов](./stego/"Тени%неприкаянных"%-%2/)  |
+| Walk the Bin            | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/stego/Walk%20the%20Bin/README.md)             |
+| No flag?                | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/stego/No%20flag%3F/README.md/)                 |
+| "Тени неприкаянных" - 1 | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/stego/%22%D0%A2%D0%B5%D0%BD%D0%B8%20%D0%BD%D0%B5%D0%BF%D1%80%D0%B8%D0%BA%D0%B0%D1%8F%D0%BD%D0%BD%D1%8B%D1%85%22%20-%201/README.md)  |
+| "Тени неприкаянных" - 2 | [Готов](https://github.com/lciga/TyumenCTF-2025-Writeups/blob/main/stego/%22%D0%A2%D0%B5%D0%BD%D0%B8%20%D0%BD%D0%B5%D0%BF%D1%80%D0%B8%D0%BA%D0%B0%D1%8F%D0%BD%D0%BD%D1%8B%D1%85%22%20-%202/README.md)  |
 
 ## Forensic
 
